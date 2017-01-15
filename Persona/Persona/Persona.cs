@@ -30,15 +30,25 @@ namespace Persona
           
 
         private string _cf;
-        public string cf { get { return _nome + _cognome + _anni} }
+        public string cf { get { return _nome + _cognome + _anni; } }
       
 
         public Persona(string nome, string cognome, int anni)
         {
             _nome = nome;
+            _cognome = cognome;
+            _anni = anni;
+        }
 
+        public string describe()
+        {
+            string output = "Dati inseriti \r\n";
+            output += "Nome: " + nome + "\r\n";
+            output += "Cognome: " + cognome + "\r\n";
+            output += "Età: " + anni + "\r\n";
+            output += "Codice Fiscale: " + cf + "\r\n";
 
-
+            return output;
         }
     }
 }
